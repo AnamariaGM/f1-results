@@ -31,7 +31,11 @@ app.get('/api/races/:race_id/results', getRaceResultsByRaceId)
 // Export the Express application instance to be used by other modules.
 module.exports=app
 
-// Starting the server and listen on the specified port
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
+
+// If the file is run directly (not as part of a test), start the server
+if (require.main === module) {
+    // Starting the server and listen on the specified port
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+}
