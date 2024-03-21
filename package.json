@@ -1,0 +1,26 @@
+{
+  "name": "f1-results",
+  "version": "1.0.0",
+  "description": "f1 races results for 2023",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "PGDATABASE=f1_results jest --detectOpenHandles",
+    "setup-db": "psql -f db/setup.sql",
+    "seed": "PGDATABASE=f1_results node db/run-seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-mutex": "^0.5.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "pg": "^8.11.3",
+    "pg-format": "^1.0.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}
