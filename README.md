@@ -33,12 +33,17 @@ By default, the server will run on port 3000. You can access the API endpoints u
 ## Environment Variables
 The application uses environment variables for configuration. If the .env file is not already present in the root directory, you need to create one. Define the following variables in the `.env` file:
 
-- `PGDATABASE`: Name of the PostgreSQL database.
+- `PGDATABASE`: Name of the new PostgreSQL database.
 - `PORT`: Port number for the server. Default is 3000.
+- `DB_USERNAME`: Your PostgreSQL username
+- `DB_DATABASE`: Default database name
+
   Here's an example `.env` file:
 ```
 PGDATABASE=f1_results
 PORT=3000
+DB_USERNAME="<your_username>"
+DB_DATABASE="postgres"
 ```
 ## MVC Architecture
 

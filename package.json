@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "PGDATABASE=f1_results jest --detectOpenHandles",
-    "setup-db": "psql -f db/setup.sql",
+    "setup-db": "node db/setup.js",
     "seed": "PGDATABASE=f1_results node db/run-seed.js"
   },
   "author": "",
